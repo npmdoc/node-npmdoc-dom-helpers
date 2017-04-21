@@ -1,0 +1,1603 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>dom-helpers (v3.2.1)</a>
+</h1>
+<h4>tiny modular DOM lib for ie8+ </h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-helpers">module dom-helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.activeElement">
+            function <span class="apidocSignatureSpan">dom-helpers.</span>activeElement
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.end">
+            function <span class="apidocSignatureSpan">dom-helpers.</span>end
+            <span class="apidocSignatureSpan">(node, handler, duration)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.ownerDocument">
+            function <span class="apidocSignatureSpan">dom-helpers.</span>ownerDocument
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.ownerWindow">
+            function <span class="apidocSignatureSpan">dom-helpers.</span>ownerWindow
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.requestAnimationFrame">
+            function <span class="apidocSignatureSpan">dom-helpers.</span>requestAnimationFrame
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.style">
+            function <span class="apidocSignatureSpan">dom-helpers.</span>style
+            <span class="apidocSignatureSpan">(node, property, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dom-helpers.</span>default</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dom-helpers.</span>events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dom-helpers.</span>query</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-helpers.default">module dom-helpers.default</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.activeElement">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>activeElement
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.closest">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>closest
+            <span class="apidocSignatureSpan">(node, selector, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.contains">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>contains
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.filter">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>filter
+            <span class="apidocSignatureSpan">(selector, handler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.height">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>height
+            <span class="apidocSignatureSpan">(node, client)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.listen">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>listen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.off">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>off
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.offset">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>offset
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.offsetParent">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>offsetParent
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.on">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>on
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.ownerDocument">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>ownerDocument
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.ownerWindow">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>ownerWindow
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.position">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>position
+            <span class="apidocSignatureSpan">(node, offsetParent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.querySelectorAll">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>querySelectorAll
+            <span class="apidocSignatureSpan">(element, selector)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.requestAnimationFrame">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>requestAnimationFrame
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.scrollParent">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>scrollParent
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.scrollTop">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>scrollTop
+            <span class="apidocSignatureSpan">(node, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.style">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>style
+            <span class="apidocSignatureSpan">(node, property, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.default.width">
+            function <span class="apidocSignatureSpan">dom-helpers.default.</span>width
+            <span class="apidocSignatureSpan">(node, client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-helpers.end">module dom-helpers.end</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.end.end">
+            function <span class="apidocSignatureSpan">dom-helpers.</span>end
+            <span class="apidocSignatureSpan">(node, handler, duration)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.end._parseDuration">
+            function <span class="apidocSignatureSpan">dom-helpers.end.</span>_parseDuration
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-helpers.events">module dom-helpers.events</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.events.filter">
+            function <span class="apidocSignatureSpan">dom-helpers.events.</span>filter
+            <span class="apidocSignatureSpan">(selector, handler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.events.listen">
+            function <span class="apidocSignatureSpan">dom-helpers.events.</span>listen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.events.off">
+            function <span class="apidocSignatureSpan">dom-helpers.events.</span>off
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.events.on">
+            function <span class="apidocSignatureSpan">dom-helpers.events.</span>on
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-helpers.query">module dom-helpers.query</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.query.closest">
+            function <span class="apidocSignatureSpan">dom-helpers.query.</span>closest
+            <span class="apidocSignatureSpan">(node, selector, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.query.contains">
+            function <span class="apidocSignatureSpan">dom-helpers.query.</span>contains
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.query.height">
+            function <span class="apidocSignatureSpan">dom-helpers.query.</span>height
+            <span class="apidocSignatureSpan">(node, client)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.query.offset">
+            function <span class="apidocSignatureSpan">dom-helpers.query.</span>offset
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.query.offsetParent">
+            function <span class="apidocSignatureSpan">dom-helpers.query.</span>offsetParent
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.query.position">
+            function <span class="apidocSignatureSpan">dom-helpers.query.</span>position
+            <span class="apidocSignatureSpan">(node, offsetParent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.query.querySelectorAll">
+            function <span class="apidocSignatureSpan">dom-helpers.query.</span>querySelectorAll
+            <span class="apidocSignatureSpan">(element, selector)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.query.scrollParent">
+            function <span class="apidocSignatureSpan">dom-helpers.query.</span>scrollParent
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.query.scrollTop">
+            function <span class="apidocSignatureSpan">dom-helpers.query.</span>scrollTop
+            <span class="apidocSignatureSpan">(node, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.query.width">
+            function <span class="apidocSignatureSpan">dom-helpers.query.</span>width
+            <span class="apidocSignatureSpan">(node, client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-helpers.requestAnimationFrame">module dom-helpers.requestAnimationFrame</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.requestAnimationFrame.requestAnimationFrame">
+            function <span class="apidocSignatureSpan">dom-helpers.</span>requestAnimationFrame
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-helpers.requestAnimationFrame.cancel">
+            function <span class="apidocSignatureSpan">dom-helpers.requestAnimationFrame.</span>cancel
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-helpers" id="apidoc.module.dom-helpers">module dom-helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.activeElement" id="apidoc.element.dom-helpers.activeElement">
+        function <span class="apidocSignatureSpan">dom-helpers.</span>activeElement
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function activeElement() {
+  var doc = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : (0, _ownerDocument2.default)();
+
+  try {
+    return doc.activeElement;
+  } catch (e) {/* ie throws if no active element */}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.end" id="apidoc.element.dom-helpers.end">
+        function <span class="apidocSignatureSpan">dom-helpers.</span>end
+        <span class="apidocSignatureSpan">(node, handler, duration)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onEnd(node, handler, duration) {
+  var fakeEvent = {
+    target: node,
+    currentTarget: node
+  },
+      backup;
+
+  if (!_properties2.default.end) duration = 0;else if (duration == null) duration = parseDuration(node) || 0;
+
+  if (_properties2.default.end) {
+    node.addEventListener(_properties2.default.end, done, false);
+
+    backup = setTimeout(function () {
+      return done(fakeEvent);
+    }, (duration || 100) * 1.5);
+  } else setTimeout(done.bind(null, fakeEvent), 0);
+
+  function done(event) {
+    if (event.target !== event.currentTarget) return;
+    clearTimeout(backup);
+    event.target.removeEventListener(_properties2.default.end, done);
+    handler.call(this);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.ownerDocument" id="apidoc.element.dom-helpers.ownerDocument">
+        function <span class="apidocSignatureSpan">dom-helpers.</span>ownerDocument
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ownerDocument(node) {
+  return node &amp;&amp; node.ownerDocument || document;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.ownerWindow" id="apidoc.element.dom-helpers.ownerWindow">
+        function <span class="apidocSignatureSpan">dom-helpers.</span>ownerWindow
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ownerWindow(node) {
+  var doc = (0, _ownerDocument2.default)(node);
+  return doc &amp;&amp; doc.defaultView || doc.parentWindow;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.requestAnimationFrame" id="apidoc.element.dom-helpers.requestAnimationFrame">
+        function <span class="apidocSignatureSpan">dom-helpers.</span>requestAnimationFrame
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compatRaf(cb) {
+  return raf(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.style" id="apidoc.element.dom-helpers.style">
+        function <span class="apidocSignatureSpan">dom-helpers.</span>style
+        <span class="apidocSignatureSpan">(node, property, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function style(node, property, value) {
+  var css = '';
+  var transforms = '';
+  var props = property;
+
+  if (typeof property === 'string') {
+    if (value === undefined) {
+      return node.style[(0, _camelizeStyle2.default)(property)] || (0, _getComputedStyle3.default)(node).getPropertyValue((0, _hyphenateStyle2
+.default)(property));
+    } else {
+      (props = {})[property] = value;
+    }
+  }
+
+  Object.keys(props).forEach(function (key) {
+    var value = props[key];
+    if (!value &amp;&amp; value !== 0) {
+      (0, _removeStyle2.default)(node, (0, _hyphenateStyle2.default)(key));
+    } else if ((0, _isTransform2.default)(key)) {
+      transforms += key + '(' + value + ') ';
+    } else {
+      css += (0, _hyphenateStyle2.default)(key) + ': ' + value + ';';
+    }
+  });
+
+  if (transforms) {
+    css += _properties.transform + ': ' + transforms + ';';
+  }
+
+  node.style.cssText += ';' + css;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-helpers.default" id="apidoc.module.dom-helpers.default">module dom-helpers.default</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.activeElement" id="apidoc.element.dom-helpers.default.activeElement">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>activeElement
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function activeElement() {
+  var doc = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : (0, _ownerDocument2.default)();
+
+  try {
+    return doc.activeElement;
+  } catch (e) {/* ie throws if no active element */}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.closest" id="apidoc.element.dom-helpers.default.closest">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>closest
+        <span class="apidocSignatureSpan">(node, selector, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function closest(node, selector, context) {
+  while (node &amp;&amp; (isDoc(node) || !(0, _matches2.default)(node, selector))) {
+    node = node !== context &amp;&amp; !isDoc(node) ? node.parentNode : undefined;
+  }
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.contains" id="apidoc.element.dom-helpers.default.contains">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>contains
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fallback(context, node) {
+  if (node) do {
+    if (node === context) return true;
+  } while (node = node.parentNode);
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = hasClass;
+function hasClass(element, className) {
+  if (element.classList) return !!className &amp;&amp; element.classList.<span class="apidocCodeKeywordSpan">contains</span>(className
+);else return (" " + element.className + " ").indexOf(" " + className + " ") !== -1;
+}
+module.exports = exports["default"];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.filter" id="apidoc.element.dom-helpers.default.filter">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>filter
+        <span class="apidocSignatureSpan">(selector, handler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function filterEvents(selector, handler) {
+  return function filterHandler(e) {
+    var top = e.currentTarget,
+        target = e.target,
+        matches = (0, _querySelectorAll2.default)(top, selector);
+
+    if (matches.some(function (match) {
+      return (0, _contains2.default)(match, target);
+    })) handler.call(this, e);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        duration:  // transition-duration
+       }
+    ```
+- events
+    + `on(node, eventName, handler, [capture])`:  capture is silently ignored in ie8
+    + `off(node, eventName, handler, [capture])`: capture is silently ignored in ie8
+    + `listen(node, eventName, handler, [capture])`: wraps `on` and returns a function that calls `off` for you
+    + `filter(selector, fn)`: returns a function handler that only fires when the target matches or is contained in the selector
+ ex: `events.on(list, 'click', events.<span class="apidocCodeKeywordSpan">filter</span>('li &gt; a', handler
+))`
+- util
+    + `requestAnimationFrame(cb)` returns an ID for canceling
+        * `requestAnimationFrame.cancel(id)`
+    + `scrollTo(element, [scrollParent])`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.height" id="apidoc.element.dom-helpers.default.height">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>height
+        <span class="apidocSignatureSpan">(node, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function height(node, client) {
+  var win = (0, _isWindow2.default)(node);
+  return win ? win.innerHeight : client ? node.clientHeight : (0, _offset2.default)(node).height;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.listen" id="apidoc.element.dom-helpers.default.listen">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>listen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listen() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.off" id="apidoc.element.dom-helpers.default.off">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>off
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function off() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.offset" id="apidoc.element.dom-helpers.default.offset">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>offset
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function offset(node) {
+  var doc = (0, _ownerDocument2.default)(node),
+      win = (0, _isWindow2.default)(doc),
+      docElem = doc &amp;&amp; doc.documentElement,
+      box = { top: 0, left: 0, height: 0, width: 0 };
+
+  if (!doc) return;
+
+  // Make sure it's not a disconnected DOM node
+  if (!(0, _contains2.default)(docElem, node)) return box;
+
+  if (node.getBoundingClientRect !== undefined) box = node.getBoundingClientRect();
+
+  // IE8 getBoundingClientRect doesn't support width &amp; height
+  box = {
+    top: box.top + (win.pageYOffset || docElem.scrollTop) - (docElem.clientTop || 0),
+    left: box.left + (win.pageXOffset || docElem.scrollLeft) - (docElem.clientLeft || 0),
+    width: (box.width == null ? node.offsetWidth : box.width) || 0,
+    height: (box.height == null ? node.offsetHeight : box.height) || 0
+  };
+
+  return box;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.offsetParent" id="apidoc.element.dom-helpers.default.offsetParent">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>offsetParent
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function offsetParent(node) {
+  var doc = (0, _ownerDocument2.default)(node),
+      offsetParent = node &amp;&amp; node.offsetParent;
+
+  while (offsetParent &amp;&amp; nodeName(node) !== 'html' &amp;&amp; (0, _style2.default)(offsetParent, 'position') === 'static') {
+    offsetParent = offsetParent.offsetParent;
+  }
+
+  return offsetParent || doc.documentElement;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.on" id="apidoc.element.dom-helpers.default.on">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>on
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function on() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        duration:  // transition-duration
+       }
+    ```
+- events
+    + `on(node, eventName, handler, [capture])`:  capture is silently ignored in ie8
+    + `off(node, eventName, handler, [capture])`: capture is silently ignored in ie8
+    + `listen(node, eventName, handler, [capture])`: wraps `on` and returns a function that calls `off` for you
+    + `filter(selector, fn)`: returns a function handler that only fires when the target matches or is contained in the selector
+ ex: `events.<span class="apidocCodeKeywordSpan">on</span>(list, 'click', events.filter('li &gt; a', handler
+))`
+- util
+    + `requestAnimationFrame(cb)` returns an ID for canceling
+        * `requestAnimationFrame.cancel(id)`
+    + `scrollTo(element, [scrollParent])`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.ownerDocument" id="apidoc.element.dom-helpers.default.ownerDocument">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>ownerDocument
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ownerDocument(node) {
+  return node &amp;&amp; node.ownerDocument || document;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.ownerWindow" id="apidoc.element.dom-helpers.default.ownerWindow">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>ownerWindow
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ownerWindow(node) {
+  var doc = (0, _ownerDocument2.default)(node);
+  return doc &amp;&amp; doc.defaultView || doc.parentWindow;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.position" id="apidoc.element.dom-helpers.default.position">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>position
+        <span class="apidocSignatureSpan">(node, offsetParent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function position(node, offsetParent) {
+  var parentOffset = { top: 0, left: 0 },
+      offset;
+
+  // Fixed elements are offset from window (parentOffset = {top:0, left: 0},
+  // because it is its only offset parent
+  if ((0, _style2.default)(node, 'position') === 'fixed') {
+    offset = node.getBoundingClientRect();
+  } else {
+    offsetParent = offsetParent || (0, _offsetParent2.default)(node);
+    offset = (0, _offset2.default)(node);
+
+    if (nodeName(offsetParent) !== 'html') parentOffset = (0, _offset2.default)(offsetParent);
+
+    parentOffset.top += parseInt((0, _style2.default)(offsetParent, 'borderTopWidth'), 10) - (0, _scrollTop2.default)(offsetParent
+) || 0;
+    parentOffset.left += parseInt((0, _style2.default)(offsetParent, 'borderLeftWidth'), 10) - (0, _scrollLeft2.default)(offsetParent
+) || 0;
+  }
+
+  // Subtract parent offsets and node margins
+  return _extends({}, offset, {
+    top: offset.top - parentOffset.top - (parseInt((0, _style2.default)(node, 'marginTop'), 10) || 0),
+    left: offset.left - parentOffset.left - (parseInt((0, _style2.default)(node, 'marginLeft'), 10) || 0)
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.querySelectorAll" id="apidoc.element.dom-helpers.default.querySelectorAll">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>querySelectorAll
+        <span class="apidocSignatureSpan">(element, selector)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function qsa(element, selector) {
+  var maybeID = selector[0] === '#',
+      maybeClass = selector[0] === '.',
+      nameOnly = maybeID || maybeClass ? selector.slice(1) : selector,
+      isSimple = simpleSelectorRE.test(nameOnly),
+      found;
+
+  if (isSimple) {
+    if (maybeID) {
+      element = element.getElementById ? element : document;
+      return (found = element.getElementById(nameOnly)) ? [found] : [];
+    }
+
+    if (element.getElementsByClassName &amp;&amp; maybeClass) return toArray(element.getElementsByClassName(nameOnly));
+
+    return toArray(element.getElementsByTagName(selector));
+  }
+
+  return toArray(element.querySelectorAll(selector));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    if (element.getElementsByClassName &amp;&amp; maybeClass) return toArray(element.getElementsByClassName(nameOnly));
+
+    return toArray(element.getElementsByTagName(selector));
+  }
+
+  return toArray(element.<span class="apidocCodeKeywordSpan">querySelectorAll</span>(selector));
+}
+module.exports = exports['default'];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.requestAnimationFrame" id="apidoc.element.dom-helpers.default.requestAnimationFrame">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>requestAnimationFrame
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compatRaf(cb) {
+  return raf(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.scrollParent" id="apidoc.element.dom-helpers.default.scrollParent">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>scrollParent
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollPrarent(node) {
+  var position = (0, _style2.default)(node, 'position'),
+      excludeStatic = position === 'absolute',
+      ownerDoc = node.ownerDocument;
+
+  if (position === 'fixed') return ownerDoc || document;
+
+  while ((node = node.parentNode) &amp;&amp; node.nodeType !== 9) {
+
+    var isStatic = excludeStatic &amp;&amp; (0, _style2.default)(node, 'position') === 'static',
+        style = (0, _style2.default)(node, 'overflow') + (0, _style2.default)(node, 'overflow-y') + (0, _style2.default)(node, '
+overflow-x');
+
+    if (isStatic) continue;
+
+    if (/(auto|scroll)/.test(style) &amp;&amp; (0, _height2.default)(node) &lt; node.scrollHeight) return node;
+  }
+
+  return document;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.scrollTop" id="apidoc.element.dom-helpers.default.scrollTop">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>scrollTop
+        <span class="apidocSignatureSpan">(node, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollTop(node, val) {
+  var win = (0, _isWindow2.default)(node);
+
+  if (val === undefined) return win ? 'pageYOffset' in win ? win.pageYOffset : win.document.documentElement.scrollTop : node.scrollTop
+;
+
+  if (win) win.scrollTo('pageXOffset' in win ? win.pageXOffset : win.document.documentElement.scrollLeft, val);else node.scrollTop
+ = val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.style" id="apidoc.element.dom-helpers.default.style">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>style
+        <span class="apidocSignatureSpan">(node, property, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function style(node, property, value) {
+  var css = '';
+  var transforms = '';
+  var props = property;
+
+  if (typeof property === 'string') {
+    if (value === undefined) {
+      return node.style[(0, _camelizeStyle2.default)(property)] || (0, _getComputedStyle3.default)(node).getPropertyValue((0, _hyphenateStyle2
+.default)(property));
+    } else {
+      (props = {})[property] = value;
+    }
+  }
+
+  Object.keys(props).forEach(function (key) {
+    var value = props[key];
+    if (!value &amp;&amp; value !== 0) {
+      (0, _removeStyle2.default)(node, (0, _hyphenateStyle2.default)(key));
+    } else if ((0, _isTransform2.default)(key)) {
+      transforms += key + '(' + value + ') ';
+    } else {
+      css += (0, _hyphenateStyle2.default)(key) + ': ' + value + ';';
+    }
+  });
+
+  if (transforms) {
+    css += _properties.transform + ': ' + transforms + ';';
+  }
+
+  node.style.cssText += ';' + css;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.default.width" id="apidoc.element.dom-helpers.default.width">
+        function <span class="apidocSignatureSpan">dom-helpers.default.</span>width
+        <span class="apidocSignatureSpan">(node, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function width(node, client) {
+  var win = (0, _isWindow2.default)(node);
+  return win ? win.innerWidth : client ? node.clientWidth : (0, _offset2.default)(node).width;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-helpers.end" id="apidoc.module.dom-helpers.end">module dom-helpers.end</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.end.end" id="apidoc.element.dom-helpers.end.end">
+        function <span class="apidocSignatureSpan">dom-helpers.</span>end
+        <span class="apidocSignatureSpan">(node, handler, duration)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onEnd(node, handler, duration) {
+  var fakeEvent = {
+    target: node,
+    currentTarget: node
+  },
+      backup;
+
+  if (!_properties2.default.end) duration = 0;else if (duration == null) duration = parseDuration(node) || 0;
+
+  if (_properties2.default.end) {
+    node.addEventListener(_properties2.default.end, done, false);
+
+    backup = setTimeout(function () {
+      return done(fakeEvent);
+    }, (duration || 100) * 1.5);
+  } else setTimeout(done.bind(null, fakeEvent), 0);
+
+  function done(event) {
+    if (event.target !== event.currentTarget) return;
+    clearTimeout(backup);
+    event.target.removeEventListener(_properties2.default.end, done);
+    handler.call(this);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.end._parseDuration" id="apidoc.element.dom-helpers.end._parseDuration">
+        function <span class="apidocSignatureSpan">dom-helpers.end.</span>_parseDuration
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseDuration(node) {
+  var str = (0, _style2.default)(node, _properties2.default.duration),
+      mult = str.indexOf('ms') === -1 ? 1000 : 1;
+
+  return parseFloat(str) * mult;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-helpers.events" id="apidoc.module.dom-helpers.events">module dom-helpers.events</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.events.filter" id="apidoc.element.dom-helpers.events.filter">
+        function <span class="apidocSignatureSpan">dom-helpers.events.</span>filter
+        <span class="apidocSignatureSpan">(selector, handler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function filterEvents(selector, handler) {
+  return function filterHandler(e) {
+    var top = e.currentTarget,
+        target = e.target,
+        matches = (0, _querySelectorAll2.default)(top, selector);
+
+    if (matches.some(function (match) {
+      return (0, _contains2.default)(match, target);
+    })) handler.call(this, e);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        duration:  // transition-duration
+       }
+    ```
+- events
+    + `on(node, eventName, handler, [capture])`:  capture is silently ignored in ie8
+    + `off(node, eventName, handler, [capture])`: capture is silently ignored in ie8
+    + `listen(node, eventName, handler, [capture])`: wraps `on` and returns a function that calls `off` for you
+    + `filter(selector, fn)`: returns a function handler that only fires when the target matches or is contained in the selector
+ ex: `events.on(list, 'click', events.<span class="apidocCodeKeywordSpan">filter</span>('li &gt; a', handler
+))`
+- util
+    + `requestAnimationFrame(cb)` returns an ID for canceling
+        * `requestAnimationFrame.cancel(id)`
+    + `scrollTo(element, [scrollParent])`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.events.listen" id="apidoc.element.dom-helpers.events.listen">
+        function <span class="apidocSignatureSpan">dom-helpers.events.</span>listen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listen() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.events.off" id="apidoc.element.dom-helpers.events.off">
+        function <span class="apidocSignatureSpan">dom-helpers.events.</span>off
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function off() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.events.on" id="apidoc.element.dom-helpers.events.on">
+        function <span class="apidocSignatureSpan">dom-helpers.events.</span>on
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function on() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        duration:  // transition-duration
+       }
+    ```
+- events
+    + `on(node, eventName, handler, [capture])`:  capture is silently ignored in ie8
+    + `off(node, eventName, handler, [capture])`: capture is silently ignored in ie8
+    + `listen(node, eventName, handler, [capture])`: wraps `on` and returns a function that calls `off` for you
+    + `filter(selector, fn)`: returns a function handler that only fires when the target matches or is contained in the selector
+ ex: `events.<span class="apidocCodeKeywordSpan">on</span>(list, 'click', events.filter('li &gt; a', handler
+))`
+- util
+    + `requestAnimationFrame(cb)` returns an ID for canceling
+        * `requestAnimationFrame.cancel(id)`
+    + `scrollTo(element, [scrollParent])`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-helpers.query" id="apidoc.module.dom-helpers.query">module dom-helpers.query</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.query.closest" id="apidoc.element.dom-helpers.query.closest">
+        function <span class="apidocSignatureSpan">dom-helpers.query.</span>closest
+        <span class="apidocSignatureSpan">(node, selector, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function closest(node, selector, context) {
+  while (node &amp;&amp; (isDoc(node) || !(0, _matches2.default)(node, selector))) {
+    node = node !== context &amp;&amp; !isDoc(node) ? node.parentNode : undefined;
+  }
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.query.contains" id="apidoc.element.dom-helpers.query.contains">
+        function <span class="apidocSignatureSpan">dom-helpers.query.</span>contains
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fallback(context, node) {
+  if (node) do {
+    if (node === context) return true;
+  } while (node = node.parentNode);
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = hasClass;
+function hasClass(element, className) {
+  if (element.classList) return !!className &amp;&amp; element.classList.<span class="apidocCodeKeywordSpan">contains</span>(className
+);else return (" " + element.className + " ").indexOf(" " + className + " ") !== -1;
+}
+module.exports = exports["default"];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.query.height" id="apidoc.element.dom-helpers.query.height">
+        function <span class="apidocSignatureSpan">dom-helpers.query.</span>height
+        <span class="apidocSignatureSpan">(node, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function height(node, client) {
+  var win = (0, _isWindow2.default)(node);
+  return win ? win.innerHeight : client ? node.clientHeight : (0, _offset2.default)(node).height;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.query.offset" id="apidoc.element.dom-helpers.query.offset">
+        function <span class="apidocSignatureSpan">dom-helpers.query.</span>offset
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function offset(node) {
+  var doc = (0, _ownerDocument2.default)(node),
+      win = (0, _isWindow2.default)(doc),
+      docElem = doc &amp;&amp; doc.documentElement,
+      box = { top: 0, left: 0, height: 0, width: 0 };
+
+  if (!doc) return;
+
+  // Make sure it's not a disconnected DOM node
+  if (!(0, _contains2.default)(docElem, node)) return box;
+
+  if (node.getBoundingClientRect !== undefined) box = node.getBoundingClientRect();
+
+  // IE8 getBoundingClientRect doesn't support width &amp; height
+  box = {
+    top: box.top + (win.pageYOffset || docElem.scrollTop) - (docElem.clientTop || 0),
+    left: box.left + (win.pageXOffset || docElem.scrollLeft) - (docElem.clientLeft || 0),
+    width: (box.width == null ? node.offsetWidth : box.width) || 0,
+    height: (box.height == null ? node.offsetHeight : box.height) || 0
+  };
+
+  return box;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.query.offsetParent" id="apidoc.element.dom-helpers.query.offsetParent">
+        function <span class="apidocSignatureSpan">dom-helpers.query.</span>offsetParent
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function offsetParent(node) {
+  var doc = (0, _ownerDocument2.default)(node),
+      offsetParent = node &amp;&amp; node.offsetParent;
+
+  while (offsetParent &amp;&amp; nodeName(node) !== 'html' &amp;&amp; (0, _style2.default)(offsetParent, 'position') === 'static') {
+    offsetParent = offsetParent.offsetParent;
+  }
+
+  return offsetParent || doc.documentElement;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.query.position" id="apidoc.element.dom-helpers.query.position">
+        function <span class="apidocSignatureSpan">dom-helpers.query.</span>position
+        <span class="apidocSignatureSpan">(node, offsetParent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function position(node, offsetParent) {
+  var parentOffset = { top: 0, left: 0 },
+      offset;
+
+  // Fixed elements are offset from window (parentOffset = {top:0, left: 0},
+  // because it is its only offset parent
+  if ((0, _style2.default)(node, 'position') === 'fixed') {
+    offset = node.getBoundingClientRect();
+  } else {
+    offsetParent = offsetParent || (0, _offsetParent2.default)(node);
+    offset = (0, _offset2.default)(node);
+
+    if (nodeName(offsetParent) !== 'html') parentOffset = (0, _offset2.default)(offsetParent);
+
+    parentOffset.top += parseInt((0, _style2.default)(offsetParent, 'borderTopWidth'), 10) - (0, _scrollTop2.default)(offsetParent
+) || 0;
+    parentOffset.left += parseInt((0, _style2.default)(offsetParent, 'borderLeftWidth'), 10) - (0, _scrollLeft2.default)(offsetParent
+) || 0;
+  }
+
+  // Subtract parent offsets and node margins
+  return _extends({}, offset, {
+    top: offset.top - parentOffset.top - (parseInt((0, _style2.default)(node, 'marginTop'), 10) || 0),
+    left: offset.left - parentOffset.left - (parseInt((0, _style2.default)(node, 'marginLeft'), 10) || 0)
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.query.querySelectorAll" id="apidoc.element.dom-helpers.query.querySelectorAll">
+        function <span class="apidocSignatureSpan">dom-helpers.query.</span>querySelectorAll
+        <span class="apidocSignatureSpan">(element, selector)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function qsa(element, selector) {
+  var maybeID = selector[0] === '#',
+      maybeClass = selector[0] === '.',
+      nameOnly = maybeID || maybeClass ? selector.slice(1) : selector,
+      isSimple = simpleSelectorRE.test(nameOnly),
+      found;
+
+  if (isSimple) {
+    if (maybeID) {
+      element = element.getElementById ? element : document;
+      return (found = element.getElementById(nameOnly)) ? [found] : [];
+    }
+
+    if (element.getElementsByClassName &amp;&amp; maybeClass) return toArray(element.getElementsByClassName(nameOnly));
+
+    return toArray(element.getElementsByTagName(selector));
+  }
+
+  return toArray(element.querySelectorAll(selector));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    if (element.getElementsByClassName &amp;&amp; maybeClass) return toArray(element.getElementsByClassName(nameOnly));
+
+    return toArray(element.getElementsByTagName(selector));
+  }
+
+  return toArray(element.<span class="apidocCodeKeywordSpan">querySelectorAll</span>(selector));
+}
+module.exports = exports['default'];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.query.scrollParent" id="apidoc.element.dom-helpers.query.scrollParent">
+        function <span class="apidocSignatureSpan">dom-helpers.query.</span>scrollParent
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollPrarent(node) {
+  var position = (0, _style2.default)(node, 'position'),
+      excludeStatic = position === 'absolute',
+      ownerDoc = node.ownerDocument;
+
+  if (position === 'fixed') return ownerDoc || document;
+
+  while ((node = node.parentNode) &amp;&amp; node.nodeType !== 9) {
+
+    var isStatic = excludeStatic &amp;&amp; (0, _style2.default)(node, 'position') === 'static',
+        style = (0, _style2.default)(node, 'overflow') + (0, _style2.default)(node, 'overflow-y') + (0, _style2.default)(node, '
+overflow-x');
+
+    if (isStatic) continue;
+
+    if (/(auto|scroll)/.test(style) &amp;&amp; (0, _height2.default)(node) &lt; node.scrollHeight) return node;
+  }
+
+  return document;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.query.scrollTop" id="apidoc.element.dom-helpers.query.scrollTop">
+        function <span class="apidocSignatureSpan">dom-helpers.query.</span>scrollTop
+        <span class="apidocSignatureSpan">(node, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrollTop(node, val) {
+  var win = (0, _isWindow2.default)(node);
+
+  if (val === undefined) return win ? 'pageYOffset' in win ? win.pageYOffset : win.document.documentElement.scrollTop : node.scrollTop
+;
+
+  if (win) win.scrollTo('pageXOffset' in win ? win.pageXOffset : win.document.documentElement.scrollLeft, val);else node.scrollTop
+ = val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.query.width" id="apidoc.element.dom-helpers.query.width">
+        function <span class="apidocSignatureSpan">dom-helpers.query.</span>width
+        <span class="apidocSignatureSpan">(node, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function width(node, client) {
+  var win = (0, _isWindow2.default)(node);
+  return win ? win.innerWidth : client ? node.clientWidth : (0, _offset2.default)(node).width;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-helpers.requestAnimationFrame" id="apidoc.module.dom-helpers.requestAnimationFrame">module dom-helpers.requestAnimationFrame</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.requestAnimationFrame.requestAnimationFrame" id="apidoc.element.dom-helpers.requestAnimationFrame.requestAnimationFrame">
+        function <span class="apidocSignatureSpan">dom-helpers.</span>requestAnimationFrame
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compatRaf(cb) {
+  return raf(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-helpers.requestAnimationFrame.cancel" id="apidoc.element.dom-helpers.requestAnimationFrame.cancel">
+        function <span class="apidocSignatureSpan">dom-helpers.requestAnimationFrame.</span>cancel
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cancel = function (id) {
+  window[cancel] &amp;&amp; typeof window[cancel] === 'function' &amp;&amp; window[cancel](id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- events
+    + `on(node, eventName, handler, [capture])`:  capture is silently ignored in ie8
+    + `off(node, eventName, handler, [capture])`: capture is silently ignored in ie8
+    + `listen(node, eventName, handler, [capture])`: wraps `on` and returns a function that calls `off` for you
+    + `filter(selector, fn)`: returns a function handler that only fires when the target matches or is contained in the selector
+ ex: `events.on(list, 'click', events.filter('li &gt; a', handler))`
+- util
+    + `requestAnimationFrame(cb)` returns an ID for canceling
+        * `requestAnimationFrame.<span class="apidocCodeKeywordSpan">cancel</span>(id)`
+    + `scrollTo(element, [scrollParent])`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
